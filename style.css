@@ -710,50 +710,47 @@ footer a {
 }
     
 
+/* =================================
+   WHATSAPP FIXED FLOATING BUTTON
+================================= */
 
-/* =====================================
-   FLOATING WHATSAPP BUTTON
-===================================== */
-
-.whatsapp-float {
+body > .whatsapp-float {
     position: fixed !important;
+    display: flex !important;
 
-    right: 25px;
-    bottom: 100px; /* Distance from screen bottom */
+    right: 25px !important;
+    bottom: 100px !important;
 
-    width: 60px;
-    height: 60px;
+    width: 60px !important;
+    height: 60px !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center !important;
+    justify-content: center !important;
 
-    background: #25D366;
-    color: #ffffff;
+    background: #25D366 !important;
+    color: #ffffff !important;
 
-    border-radius: 50%;
-    font-size: 34px;
-    text-decoration: none;
+    border-radius: 50% !important;
+    font-size: 34px !important;
 
-    z-index: 99999;
+    text-decoration: none !important;
+    z-index: 2147483647 !important;
 
-    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.35);
-
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 20px rgba(37,211,102,0.4);
 }
 
-/* WhatsApp icon */
-.whatsapp-float i {
+/* WhatsApp logo */
+body > .whatsapp-float i {
     position: relative;
     z-index: 2;
 }
 
 /* Pulsing animation */
-.whatsapp-pulse {
+body > .whatsapp-float .whatsapp-pulse {
     position: absolute;
     inset: 0;
-    background: #25D366;
     border-radius: 50%;
+    background: #25D366;
     z-index: 1;
 
     animation: whatsappPulse 2s infinite;
@@ -771,24 +768,16 @@ footer a {
     }
 }
 
-/* Hover effect */
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    color: white;
-}
-
-/* Mobile responsive */
+/* Mobile design */
 @media (max-width: 600px) {
-    .whatsapp-float {
-        right: 18px;
-        bottom: 90px;
-        width: 55px;
-        height: 55px;
-        font-size: 30px;
+    body > .whatsapp-float {
+        right: 18px !important;
+        bottom: 90px !important;
+        width: 55px !important;
+        height: 55px !important;
+        font-size: 30px !important;
     }
 }
-
-/* END WHATSAPP BUTTON */
     
 
 /* BACK TO TOP BUTTON */
