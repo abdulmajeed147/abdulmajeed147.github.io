@@ -144,3 +144,30 @@ document.addEventListener("DOMContentLoaded", function () {
 // ========================================
 // END BACK TO TOP FUNCTIONALITY
 // ========================================
+
+// =====================================
+// WHATSAPP FLOATING BUTTON FIX
+// =====================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const whatsapp = document.querySelector(".whatsapp-float");
+
+    if (whatsapp) {
+
+        // Move button directly into the body
+        document.body.appendChild(whatsapp);
+
+        // Keep button fixed on the screen
+        whatsapp.style.setProperty(
+            "position", "fixed", "important"
+        );
+
+        whatsapp.style.setProperty(
+            "z-index", "999999", "important"
+        );
+    }
+
+});
+
+// END WHATSAPP BUTTON FIX
