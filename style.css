@@ -798,13 +798,8 @@ footer a {
 
 /* END WHATSAPP FLOATING BUTTON */
    
-/* =================================
-   FLOATING BACK TO TOP BUTTON
-================================= */
 
-html {
-    scroll-behavior: smooth;
-}
+/* BACK TO TOP BUTTON */
 
 .back-to-top {
     position: fixed;
@@ -829,30 +824,35 @@ html {
 
     z-index: 9999;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
     transition: all 0.3s ease;
+}
+
+/* Show button after scrolling */
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 /* Hover animation */
 .back-to-top:hover {
     background: #6366f1;
-    color: #ffffff;
+    color: white;
     transform: translateY(-5px);
-    border-color: #818cf8;
 }
 
-/* Mobile responsive */
+/* Mobile design */
 @media (max-width: 600px) {
     .back-to-top {
         width: 48px;
         height: 48px;
         bottom: 22px;
         left: 18px;
-        font-size: 19px;
     }
 }
-
-/* END BACK TO TOP BUTTON */
     
 }
