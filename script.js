@@ -107,3 +107,40 @@ const yearElement = document.getElementById("year");
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
+
+// ========================================
+// BACK TO TOP BUTTON FUNCTIONALITY
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const backToTop = document.querySelector(".back-to-top");
+
+    if (!backToTop) return;
+
+    // Show button when scrolling down
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 300) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+
+    });
+
+    // Smoothly scroll to top when clicked
+    backToTop.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+});
+
+// ========================================
+// END BACK TO TOP FUNCTIONALITY
+// ========================================
